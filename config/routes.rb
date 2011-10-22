@@ -2,7 +2,7 @@ Rails3Template::Application.routes.draw do
   devise_for :users
 
   root :to  =>  "home#index"
-  #get "home/index"
+  get "/secret", :as => 'secret', :to => 'home#secret'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
