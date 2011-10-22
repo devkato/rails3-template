@@ -1,11 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2'
+gem 'rails',  '=3.1.1'
+gem 'mysql2', '=0.3.7'
 
 
 # Gems used only for assets and not required
@@ -16,7 +12,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '=1.0.16'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -31,7 +27,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development, :test do
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'rspec', '=2.7.0'
+  gem 'rspec-rails', '=2.7.0'
 end
 
