@@ -1,1 +1,2 @@
 grep 'rails3' -R .
+grep 'Rails3' -R .
