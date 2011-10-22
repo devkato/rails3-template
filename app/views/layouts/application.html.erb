@@ -21,7 +21,7 @@
   <body>
 
 <%
-=begin
+#=begin
 %>
     <!-- ================================================================================ -->
     <!-- bootstrap fluid layout                                                           -->
@@ -42,7 +42,16 @@
               Signed in as <%= current_user.email %>. Not you?
               <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
             <% else %>
+<!--
               <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+-->
+              <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'pull-right'}) do |f| %>
+                <%= link_to "Sign up", new_user_registration_path %> or
+                <%= f.email_field :email, :class => 'input-small', :placeholder => 'E-mail' %>
+                <%= f.password_field :password, :class => 'input-small', :placeholder => 'Password' %>
+                <%= f.submit "Sign in", :class => 'btn' %>
+              <% end %>
+
             <% end %>
           </p>
         </div>
@@ -134,7 +143,7 @@
     </div>
     <!-- /container-fluid -->
 <%
-=end
+#=end
 %>
 
 <%
@@ -220,7 +229,9 @@
 %>
 
 
-
+<%
+=begin
+%>
     <!-- ================================================================================ -->
     <!-- bootstrap container-app layout                                                   -->
     <!-- ================================================================================ -->
@@ -285,6 +296,9 @@
 
     </div>
     <!-- /container -->
+<%
+=end
+%>
 
   </body>
 </html>
