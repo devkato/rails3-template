@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails',  '=3.1.1'
-gem 'mysql2', '=0.3.7'
+gem 'rails',     '=3.1.1'
+gem 'mysql2',    '=0.3.7'
+gem 'kaminari',  '=0.12.4'
 
 
 # Gems used only for assets and not required
