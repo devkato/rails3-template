@@ -7,7 +7,10 @@ gem 'devise', '=1.4.9'
 gem 'activeadmin', '=0.3.2'
 
 # for heroku
-gem 'activerecord-postgresql-adapter'
+group :production do
+  gem 'pg'
+  #gem 'activerecord-postgresql-adapter'
+end
 
 
 # Gems used only for assets and not required
